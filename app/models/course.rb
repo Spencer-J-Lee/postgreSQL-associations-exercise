@@ -12,4 +12,9 @@ class Course < ApplicationRecord
 		primary_key: :prereq_id,
 		foreign_key: :id,
 		class_name:  :Course
+
+	has_one :instructor,
+		primary_key: :instructor_id,
+		foreign_key: :id,
+		class_name:  :User
 end
